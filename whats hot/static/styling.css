@@ -1,0 +1,13 @@
+body{
+    position: center;
+    background-image: url('4k bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html{
+    overflow-y: scroll;
+}
+h1{
+    font-family: cursive;
+    
+}

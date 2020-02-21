@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<center><h1>What's hot<img src="https://img.icons8.com/color/35/000000/fire-element.png">?</h1></center>
+<div class="container">
+<div class="row align-items-centre">
+
+    <div class="col">
+        <form  method="GET" action="{{url_for('index')}}">
+            <div class="form-group">
+                <p</p>
+                <label for="">See whats tending in your area. Enter location name</label>
+                <input type="text" name="location" class="form-control" id="exampleInput" placeholder="Location Name" required>
+                <i><small class="emailHelp" class="form-text text-muted">Use your COUNTRY NAME as location name.</small></i><br>
+                <input type="submit" value="Search" class="btn btn-primary btn-block">
+            </div>
+        </form>
+    </div>
+
+    <div class="col">
+        
+        <ol class="list-group">
+            {% if trends%}
+            <h4>Top Trending</h4>
+                {% for trend in trends[0]["trends"]%}
+                    <a target="_blank"  class="list-group-item list-group-item-action" href="{{trend.url}}">{{trend.name}}</a>
+                    
+                {% endfor %}
+            {% endif %}
+        </ol>
+    </div>
+    
+
+</div>
+</div>
+{% endblock %}
