@@ -6,8 +6,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'canyoukeepasecret'
 client = yweather.Client()
 
-auth = tweepy.OAuthHandler("FqyooQamrl1rf6POvlilOqcY5","UryLa3N4bmEVFmRWVO09Aks6YoNFgxUojUafJZVFHkm3K05tOF")
-auth.set_access_token("2745497499-isFWOMENSyndVn1lLDQm4bZO9om0NqzUjg6n4z5","jU5BmG5sWAg8asXxSJQ8vLm0z8ClVjjhFk4MoCxUaO6eT")
+auth = tweepy.OAuthHandler("your_API_KEY, your_API_secret_key")
+auth.set_access_token("your acces_token_key, your_access_token_secret")
 api = tweepy.API(auth)
 
 @app.route('/')
